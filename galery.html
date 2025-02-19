@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Kami</title>
+    <title>Galeri</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -55,51 +55,53 @@
             font-size: 16px;
         }
 
-        /* Konten */
-        .content {
-            background-color: #ffffff;
-            margin: 30px auto;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px;
+        }
+
+        /* Container for images and overlays */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
             border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        form label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            display: block;
-        }
-        form input, form textarea {
+        .gallery img {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        form textarea {
-            resize: vertical;
-            min-height: 100px;
+            height: auto;
+            transition: transform 0.3s ease;
         }
 
-        button {
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            background-color: #b6f5d8;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 15px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #94d2bd;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* Footer */
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -118,9 +120,8 @@
             nav ul li {
                 margin: 10px 0;
             }
-            .content {
-                padding: 20px;
-                margin: 20px;
+            .gallery {
+                grid-template-columns: 1fr 1fr;
             }
             h1 {
                 font-size: 30px;
@@ -139,29 +140,40 @@
         </ul>
     </nav>
 
-    <!-- Judul Halaman -->
-    <h1>Kontak Kami</h1>
-    <small>Berinteraksi Dengan Kami</small>
+    <!-- Title Section -->
+    <h1>Galeri Kami</h1>
+    <small>Menikmati Koleksi Gambar Kami</small>
 
     <hr />
 
-    <!-- Konten Formulir Kontak -->
-    <div class="content">
-        <form action="" method="post">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="pesan">Pesan:</label>
-            <textarea id="pesan" name="pesan" required></textarea>
-
-            <button type="submit">Kirim Pesan</button>
-        </form>
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 1">
+            <div class="overlay">by. itst4m</div>
+        </div>
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 2">
+            <div class="overlay">by. itst4m</div>
+        </div>
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 3">
+            <div class="overlay">by. itst4m</div>
+        </div>
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 4">
+            <div class="overlay">by. itst4m</div>
+        </div>
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 5">
+            <div class="overlay">by. itst4m</div>
+        </div>
+        <div class="gallery-item">
+            <img src="img/image1.jpg" alt="Gambar 6">
+            <div class="overlay">by. itst4m</div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>&copy; 2025 Website Design by Rasya Oetama Putra</footer>
+    <footer>&copy; Website Design By Rasya Oetama Putra</footer>
 </body>
 </html>
