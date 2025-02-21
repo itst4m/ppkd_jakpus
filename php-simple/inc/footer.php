@@ -1,0 +1,1 @@
+<footer>&copy; 2025 Website Design by Rasya Oetama Putra</footer>

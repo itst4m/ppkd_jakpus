@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
+
+    /* Navbar */
+    nav {
+        background-color: #005f73;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #94d2bd;
+        border-radius: 5px;
+    }
+
+    /* Header */
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+        font-size: 36px;
+    }
+
+    small {
+        display: block;
+        text-align: center;
+        color: #777;
+        font-size: 16px;
+    }
+
+    /* Konten */
+    .content {
+        background-color: #ffffff;
+        margin: 30px auto;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        border-radius: 8px;
+    }
+
+    form label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #b6f5d8;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #94d2bd;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <?php require "../php-simple/inc/navbar.php"; ?>
+
+    <!-- Judul Halaman -->
+    <h1>Kontak Kami</h1>
+    <small>Berinteraksi Dengan Kami</small>
+
+    <hr />
+
+    <!-- Konten Formulir Kontak -->
+    <div class="content">
+        <form action="" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <?php require_once "inc/footer.php" ?>
+</body>
+
+</html>

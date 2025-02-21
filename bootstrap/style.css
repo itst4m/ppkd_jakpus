@@ -1,0 +1,37 @@
+.display-inti .card .card-header,
+.display-inti .card .card-body,
+.display-inti .card .card-footer p{
+    margin: 5;
+    font-size: 20px;
+    font-weight: bold;
+}
+.display-inti .card .card-body{
+    font-size: 5vw;
+}
+
+.display-inti .card .card-body{
+    margin-bottom: 5px;
+}
+
+.display-antrian .card .card-body,
+.display-antrian .card .card-footer p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.display-antrian .card .card-body{
+    font-size: 3vw;
+}
+
+.display-antrian .card .card-body{
+    margin-bottom: 5px;
+}
+
+.jadwal-sholat .box-jadwal-sholat {
+    background: linear-gradient(164deg, white, green);
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1vw;
+}
